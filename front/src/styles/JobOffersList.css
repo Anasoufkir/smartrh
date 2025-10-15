@@ -1,0 +1,74 @@
+/* Titre de la section des offres d'emploi */
+.job-offers-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Conteneur principal des offres d'emploi */
+.job-offers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Style individuel pour chaque offre d'emploi */
+.job-offer {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(30% - 20px); /* Affiche trois offres par ligne avec espacement inclus */
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease;
+}
+
+.job-offer:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre de l'offre d'emploi */
+.job-offer-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Détails de l'offre d'emploi */
+.job-offer-details {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.bold-detail {
+    font-weight: bold;
+}
+
+/* Bouton d'application */
+.apply-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #28a745; /* Vert */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #218838; /* Vert légèrement plus foncé au survol */
+}
+
+@media (max-width: 768px) {
+    .job-offer {
+        width: calc(50% - 20px); /* Affiche deux offres par ligne sur tablettes */
+    }
+}
+
+@media (max-width: 480px) {
+    .job-offer {
+        width: 100%;
+    }
+}

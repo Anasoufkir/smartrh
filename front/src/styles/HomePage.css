@@ -1,0 +1,26 @@
+/* Style pour le conteneur de la page d'accueil */
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Pleine hauteur de la fenêtre */
+    background-color: #f4f4f4; /* Couleur de fond gris clair */
+  }
+  
+  /* Style pour le titre de la page d'accueil */
+  .homepage-title {
+    font-size: 2.5rem; /* Taille de police grande */
+    color: #333; /* Couleur de texte sombre */
+    margin-bottom: 20px; /* Marge inférieure */
+  }
+  
+  /* Style pour le paragraphe de la page d'accueil */
+  .homepage-description {
+    font-size: 1.2rem; /* Taille de police moyenne */
+    color: #666; /* Couleur de texte légèrement plus sombre */
+    max-width: 600px; /* Largeur maximale du paragraphe */
+    text-align: center; /* Centrer le texte */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+  }
+  

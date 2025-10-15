@@ -1,0 +1,41 @@
+/* Style général du formulaire */
+form {
+    max-width: 500px; /* Limite la largeur du formulaire pour une meilleure lisibilité */
+    margin: 20px auto; /* Centre le formulaire sur la page */
+    padding: 20px; /* Ajoute un peu d'espace à l'intérieur du formulaire */
+    border: 1px solid #ccc; /* Ajoute une bordure subtile autour du formulaire */
+    border-radius: 8px; /* Coins arrondis pour un look moderne */
+    background-color: #f9f9f9; /* Couleur de fond légère pour le formulaire */
+}
+
+/* Style des champs de saisie */
+input[type="text"],
+input[type="email"] {
+    width: calc(100% - 22px); /* Ajuste la largeur pour tenir compte du padding */
+    margin-bottom: 10px; /* Espacement entre chaque champ */
+    padding: 10px; /* Espacement à l'intérieur des champs pour faciliter la saisie */
+    border: 1px solid #ccc; /* Bordure subtile */
+    border-radius: 4px; /* Coins légèrement arrondis */
+    box-sizing: border-box; /* S'assure que le padding et la bordure sont inclus dans la largeur totale */
+}
+
+input::placeholder {
+    color: #aaa; /* Couleur du texte du placeholder pour une meilleure lisibilité */
+}
+
+/* Style du bouton de soumission */
+button[type="submit"] {
+    width: 100%; /* Étend le bouton à toute la largeur du formulaire */
+    padding: 10px; /* Espacement à l'intérieur du bouton */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 4px; /* Coins légèrement arrondis */
+    background-color: #28a745; /* Couleur de fond du bouton en vert */
+    color: white; /* Couleur du texte du bouton */
+    font-size: 1rem; /* Taille du texte */
+    cursor: pointer; /* Change le curseur en main pour indiquer la possibilité de cliquer */
+    transition: background-color 0.3s; /* Animation légère lors du survol */
+}
+
+button[type="submit"]:hover {
+    background-color: #218838; /* Assombrit la couleur de fond au survol pour un effet interactif, en vert plus foncé */
+}

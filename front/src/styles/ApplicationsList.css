@@ -1,0 +1,50 @@
+/* Style général du conteneur des candidatures */
+.applications-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Titre de la page des candidatures */
+.applications-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style de la liste des candidatures */
+.applications-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Assure un espacement uniforme entre les candidatures */
+    gap: 20px; /* Espacement entre les éléments pour éviter le chevauchement */
+}
+
+/* Style individuel pour chaque élément de candidature */
+.application-item {
+    border: 1px solid #ccc; /* Bordure légère pour délimiter chaque candidature */
+    border-radius: 8px; /* Coins arrondis pour un look moderne */
+    padding: 20px; /* Espacement interne pour ne pas coller le contenu aux bords */
+    width: calc(50% - 20px); /* Calcul pour 2 candidatures par ligne avec gap inclus, ajustable selon préférence */
+    margin-bottom: 20px; /* Espacement sous chaque candidature pour une séparation claire */
+    background-color: #fff; /* Fond blanc pour faire ressortir chaque candidature */
+}
+
+/* Style pour les détails de la candidature */
+.application-item p {
+    margin-bottom: 5px; /* Espacement entre les lignes pour une lecture aisée */
+}
+
+.application-item a {
+    color: #007bff; /* Couleur des liens pour les rendre visuellement distincts */
+    text-decoration: none; /* Supprime le soulignement par défaut des liens */
+}
+
+.application-item a:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol pour indiquer la possibilité de cliquer */
+}
+
+@media (max-width: 768px) {
+    .application-item {
+        width: 100%; /* Affiche 1 candidature par ligne sur tablettes et mobiles pour la lisibilité */
+    }
+}

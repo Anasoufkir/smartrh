@@ -1,0 +1,28 @@
+/* Style de base pour la barre de navigation */
+nav {
+    background-color: #009900; /* Couleur de fond verte par défaut */
+    padding: 20px; /* Espacement intérieur */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  }
+  
+  /* Style des liens de la barre de navigation */
+  nav a {
+    color: #ffffff; /* Couleur du texte blanc */
+    text-decoration: none; /* Pas de soulignement */
+    margin: 0 15px; /* Marge entre les liens */
+    padding: 10px 15px; /* Espacement intérieur des liens */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition de la couleur de fond */
+    font-weight: bold; /* Texte en gras */
+  }
+  
+  /* Style pour le lien actif */
+  nav a.active {
+    background-color: #005500; /* Couleur de fond verte foncée pour le lien actif */
+  }
+  
+  /* Effet de survol sur les liens */
+  nav a:hover {
+    background-color: #00cc00; /* Changement de couleur de fond au survol */
+  }
+  
