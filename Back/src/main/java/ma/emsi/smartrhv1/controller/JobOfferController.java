@@ -1,16 +1,18 @@
 package ma.emsi.smartrhv1.controller;
 
+import jakarta.validation.Valid;
 import ma.emsi.smartrhv1.model.JobOffer;
 import ma.emsi.smartrhv1.services.JobOfferService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/job-offers")
-@CrossOrigin(origins="*")
+@CrossOrigin(origins = "*")
 public class JobOfferController {
 
     @Autowired
@@ -22,7 +24,7 @@ public class JobOfferController {
     }
 
     @PostMapping
-    public ResponseEntity<JobOffer> createJobOffer(@RequestBody JobOffer jobOffer) {
+    public ResponseEntity<JobOffer> createJobOffer(@Valid @RequestBody JobOffer jobOffer) {
         return new ResponseEntity<>(jobOfferService.save(jobOffer), HttpStatus.CREATED);
     }
 
@@ -34,7 +36,8 @@ public class JobOfferController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<JobOffer> updateJobOffer(@PathVariable String id, @RequestBody JobOffer jobOfferDetails) {
+    public ResponseEntity<JobOffer> updateJobOffer(@PathVariable String id,
+                                                    @Valid @RequestBody JobOffer jobOfferDetails) {
         return ResponseEntity.ok(jobOfferService.update(id, jobOfferDetails));
     }
 

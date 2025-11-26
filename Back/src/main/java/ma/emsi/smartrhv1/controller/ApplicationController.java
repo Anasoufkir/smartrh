@@ -1,16 +1,18 @@
 package ma.emsi.smartrhv1.controller;
 
+import jakarta.validation.Valid;
 import ma.emsi.smartrhv1.model.Application;
 import ma.emsi.smartrhv1.services.ApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/applications")
-@CrossOrigin(origins="*")
+@CrossOrigin(origins = "*")
 public class ApplicationController {
 
     @Autowired
@@ -22,7 +24,7 @@ public class ApplicationController {
     }
 
     @PostMapping
-    public ResponseEntity<Application> submitApplication(@RequestBody Application application) {
+    public ResponseEntity<Application> submitApplication(@Valid @RequestBody Application application) {
         return new ResponseEntity<>(applicationService.save(application), HttpStatus.CREATED);
     }
 
@@ -34,7 +36,8 @@ public class ApplicationController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Application> updateApplication(@PathVariable String id, @RequestBody Application applicationDetails) {
+    public ResponseEntity<Application> updateApplication(@PathVariable String id,
+                                                          @Valid @RequestBody Application applicationDetails) {
         return ResponseEntity.ok(applicationService.update(id, applicationDetails));
     }
 
