@@ -1,27 +1,31 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080/api';
 
-// Offres d'emploi
-export const fetchJobOffers = () => axios.get(`${API_BASE_URL}/job-offers`);
-export const createJobOffer = (data) => axios.post(`${API_BASE_URL}/job-offers`, data);
-export const getJobOfferById = (id) => axios.get(`${API_BASE_URL}/job-offers/${id}`);
-export const updateJobOffer = (id, data) => axios.put(`${API_BASE_URL}/job-offers/${id}`, data);
-export const deleteJobOffer = (id) => axios.delete(`${API_BASE_URL}/job-offers/${id}`);
+const apiClient = axios.create({ baseURL: API_BASE_URL });
 
-// Candidatures
-export const fetchApplications = () => axios.get(`${API_BASE_URL}/applications`);
-
-// Modify submitApplication to accept FormData
-export const submitApplication = (formData) => axios.post(`${API_BASE_URL}/applications`, formData, {
-  headers: {
-    'Content-Type': 'multipart/form-data' // Set content type to multipart/form-data for file upload
+apiClient.interceptors.request.use((config) => {
+  const token = localStorage.getItem('authToken');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
   }
+  return config;
 });
 
-export const getApplicationById = (id) => axios.get(`${API_BASE_URL}/applications/${id}`);
-export const updateApplication = (id, data) => axios.put(`${API_BASE_URL}/applications/${id}`, data);
-export const deleteApplication = (id) => axios.delete(`${API_BASE_URL}/applications/${id}`);
+// Offres d'emploi
+export const fetchJobOffers  = ()         => apiClient.get('/job-offers');
+export const createJobOffer  = (data)     => apiClient.post('/job-offers', data);
+export const getJobOfferById = (id)       => apiClient.get(`/job-offers/${id}`);
+export const updateJobOffer  = (id, data) => apiClient.put(`/job-offers/${id}`, data);
+export const deleteJobOffer  = (id)       => apiClient.delete(`/job-offers/${id}`);
 
-export const login = (data) => axios.post(`${API_BASE_URL}/auth/login`, data);
-export const signup = (data) => axios.post(`${API_BASE_URL}/auth/signup`, data);
+// Candidatures
+export const fetchApplications  = ()         => apiClient.get('/applications');
+export const submitApplication  = (data)     => apiClient.post('/applications', data);
+export const getApplicationById = (id)       => apiClient.get(`/applications/${id}`);
+export const updateApplication  = (id, data) => apiClient.put(`/applications/${id}`, data);
+export const deleteApplication  = (id)       => apiClient.delete(`/applications/${id}`);
+
+// Authentification
+export const login  = (data) => apiClient.post('/auth/login', data);
+export const signup = (data) => apiClient.post('/auth/signup', data);
