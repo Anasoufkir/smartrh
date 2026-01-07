@@ -1,0 +1,34 @@
+# Java / Maven
+Back/target/
+Back/.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+*.ear
+
+# Node / React
+front/node_modules/
+front/build/
+front/.env
+front/.env.local
+front/.env.development.local
+front/.env.test.local
+front/.env.production.local
+front/npm-debug.log*
+front/yarn-debug.log*
+front/yarn-error.log*
+
+# Environment secrets
+.env
+.env.local
+
+# IDE
+.idea/
+Back/.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Logs
+*.log
+logs/
