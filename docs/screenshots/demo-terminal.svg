@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="480" viewBox="0 0 840 480">
+  <!-- Terminal background -->
+  <rect width="840" height="480" rx="10" fill="#0f172a"/>
+  <!-- Title bar -->
+  <rect width="840" height="36" rx="10" fill="#1e293b"/>
+  <rect y="18" width="840" height="18" fill="#1e293b"/>
+  <!-- Traffic lights -->
+  <circle cx="20" cy="18" r="6" fill="#ef4444"/>
+  <circle cx="40" cy="18" r="6" fill="#f59e0b"/>
+  <circle cx="60" cy="18" r="6" fill="#22c55e"/>
+  <!-- Title -->
+  <text x="420" y="23" font-family="Arial" font-size="12" fill="#94a3b8" text-anchor="middle">SmartRH — Terminal</text>
+
+  <!-- Line 1: prompt -->
+  <text x="20" y="68" font-family="Courier New" font-size="13" fill="#22c55e">$</text>
+  <text x="34" y="68" font-family="Courier New" font-size="13" fill="#e2e8f0">curl -s -X POST http://localhost:8080/api/auth/login \</text>
+
+  <!-- Line 2 -->
+  <text x="34" y="86" font-family="Courier New" font-size="13" fill="#e2e8f0">  -H "Content-Type: application/json" \</text>
+
+  <!-- Line 3 -->
+  <text x="34" y="104" font-family="Courier New" font-size="13" fill="#e2e8f0">  -d '{"username":"alice","password":"motdepasse"}'</text>
+
+  <!-- Response block -->
+  <rect x="20" y="116" width="800" height="44" rx="4" fill="#0f2744"/>
+  <text x="34" y="134" font-family="Courier New" font-size="13" fill="#60a5fa">{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZSIsInJvbGUi</text>
+  <text x="34" y="152" font-family="Courier New" font-size="13" fill="#60a5fa">OiJVU0VSIiwiaWF0IjoxNzA5MDAwMDAwfQ.xK9pQ2rVs8..."}</text>
+
+  <!-- Divider -->
+  <line x1="20" y1="174" x2="820" y2="174" stroke="#334155" stroke-width="1"/>
+
+  <!-- Line 5: fetch offers -->
+  <text x="20" y="198" font-family="Courier New" font-size="13" fill="#22c55e">$</text>
+  <text x="34" y="198" font-family="Courier New" font-size="13" fill="#e2e8f0">curl -s http://localhost:8080/api/job-offers \</text>
+  <text x="34" y="216" font-family="Courier New" font-size="13" fill="#e2e8f0">  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9..." | python3 -m json.tool</text>
+
+  <!-- JSON response -->
+  <rect x="20" y="228" width="800" height="172" rx="4" fill="#0f2744"/>
+  <text x="34" y="248" font-family="Courier New" font-size="13" fill="#e2e8f0">[</text>
+  <text x="34" y="266" font-family="Courier New" font-size="13" fill="#e2e8f0">  {</text>
+  <text x="34" y="284" font-family="Courier New" font-size="13" fill="#a78bfa">    "id":</text>
+  <text x="100" y="284" font-family="Courier New" font-size="13" fill="#86efac">"6f3a82c..."</text>
+  <text x="34" y="302" font-family="Courier New" font-size="13" fill="#a78bfa">    "title":</text>
+  <text x="114" y="302" font-family="Courier New" font-size="13" fill="#86efac">"Developpeur Java Senior"</text>
+  <text x="34" y="320" font-family="Courier New" font-size="13" fill="#a78bfa">    "company":</text>
+  <text x="127" y="320" font-family="Courier New" font-size="13" fill="#86efac">"Acme Corp"</text>
+  <text x="34" y="338" font-family="Courier New" font-size="13" fill="#a78bfa">    "location":</text>
+  <text x="130" y="338" font-family="Courier New" font-size="13" fill="#86efac">"Paris, France"</text>
+  <text x="34" y="356" font-family="Courier New" font-size="13" fill="#e2e8f0">  }</text>
+  <text x="34" y="374" font-family="Courier New" font-size="13" fill="#e2e8f0">  <tspan fill="#94a3b8">... 4 offres au total</tspan></text>
+  <text x="34" y="392" font-family="Courier New" font-size="13" fill="#e2e8f0">]</text>
+
+  <!-- Footer status -->
+  <rect x="0" y="452" width="840" height="28" rx="4" fill="#1e293b"/>
+  <text x="20" y="470" font-family="Arial" font-size="11" fill="#22c55e">200 OK</text>
+  <text x="80" y="470" font-family="Arial" font-size="11" fill="#94a3b8">Spring Boot 3.2  |  MongoDB 7  |  JWT HS256</text>
+  <text x="700" y="470" font-family="Arial" font-size="11" fill="#94a3b8">SmartRH v1.1.0</text>
+</svg>

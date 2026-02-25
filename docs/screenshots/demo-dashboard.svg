@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="520" viewBox="0 0 840 520">
+  <!-- Page background -->
+  <rect width="840" height="520" fill="#0f172a"/>
+
+  <!-- Navbar -->
+  <rect width="840" height="52" fill="#1e293b"/>
+  <text x="24" y="32" font-family="Arial" font-size="18" font-weight="bold" fill="#f8fafc">SmartRH</text>
+  <text x="180" y="32" font-family="Arial" font-size="13" fill="#94a3b8">Accueil</text>
+  <text x="250" y="32" font-family="Arial" font-size="13" fill="#60a5fa">Offres</text>
+  <text x="310" y="32" font-family="Arial" font-size="13" fill="#94a3b8">Candidatures</text>
+  <!-- User badge -->
+  <rect x="730" y="12" width="90" height="28" rx="14" fill="#334155"/>
+  <text x="775" y="31" font-family="Arial" font-size="12" fill="#e2e8f0" text-anchor="middle">alice (RH)</text>
+
+  <!-- Page title -->
+  <text x="30" y="90" font-family="Arial" font-size="20" font-weight="bold" fill="#f8fafc">Offres d'emploi</text>
+  <text x="30" y="110" font-family="Arial" font-size="13" fill="#64748b">4 offres disponibles</text>
+  <!-- Add button -->
+  <rect x="700" y="72" width="120" height="34" rx="6" fill="#3b82f6"/>
+  <text x="760" y="94" font-family="Arial" font-size="13" fill="#ffffff" text-anchor="middle">+ Nouvelle offre</text>
+
+  <!-- Card 1 -->
+  <rect x="30" y="128" width="370" height="140" rx="8" fill="#1e293b"/>
+  <rect x="30" y="128" width="6" height="140" rx="3" fill="#3b82f6"/>
+  <text x="52" y="154" font-family="Arial" font-size="15" font-weight="bold" fill="#f8fafc">Developpeur Java Senior</text>
+  <rect x="52" y="163" width="70" height="18" rx="9" fill="#1d4ed8"/>
+  <text x="87" y="176" font-family="Arial" font-size="10" fill="#bfdbfe" text-anchor="middle">Backend</text>
+  <text x="52" y="200" font-family="Arial" font-size="12" fill="#94a3b8">Acme Corp  —  Paris, France</text>
+  <text x="52" y="220" font-family="Arial" font-size="12" fill="#64748b">Spring Boot, MongoDB, Docker, CI/CD</text>
+  <text x="52" y="238" font-family="Arial" font-size="12" fill="#64748b">Experience : 3-5 ans</text>
+  <rect x="52" y="250" width="100" height="26" rx="5" fill="#0f172a"/>
+  <text x="102" y="268" font-family="Arial" font-size="12" fill="#60a5fa" text-anchor="middle">Postuler</text>
+  <text x="340" y="268" font-family="Arial" font-size="11" fill="#64748b">3 candidatures</text>
+
+  <!-- Card 2 -->
+  <rect x="440" y="128" width="370" height="140" rx="8" fill="#1e293b"/>
+  <rect x="440" y="128" width="6" height="140" rx="3" fill="#a855f7"/>
+  <text x="462" y="154" font-family="Arial" font-size="15" font-weight="bold" fill="#f8fafc">Developpeur React / TypeScript</text>
+  <rect x="462" y="163" width="70" height="18" rx="9" fill="#581c87"/>
+  <text x="497" y="176" font-family="Arial" font-size="10" fill="#e9d5ff" text-anchor="middle">Frontend</text>
+  <text x="462" y="200" font-family="Arial" font-size="12" fill="#94a3b8">Beta Tech  —  Lyon, France</text>
+  <text x="462" y="220" font-family="Arial" font-size="12" fill="#64748b">React 18, TypeScript, Tailwind CSS</text>
+  <text x="462" y="238" font-family="Arial" font-size="12" fill="#64748b">Experience : 2-4 ans</text>
+  <rect x="462" y="250" width="100" height="26" rx="5" fill="#0f172a"/>
+  <text x="512" y="268" font-family="Arial" font-size="12" fill="#60a5fa" text-anchor="middle">Postuler</text>
+  <text x="750" y="268" font-family="Arial" font-size="11" fill="#64748b">7 candidatures</text>
+
+  <!-- Card 3 -->
+  <rect x="30" y="288" width="370" height="140" rx="8" fill="#1e293b"/>
+  <rect x="30" y="288" width="6" height="140" rx="3" fill="#22c55e"/>
+  <text x="52" y="314" font-family="Arial" font-size="15" font-weight="bold" fill="#f8fafc">DevOps / Cloud Engineer</text>
+  <rect x="52" y="323" width="70" height="18" rx="9" fill="#14532d"/>
+  <text x="87" y="336" font-family="Arial" font-size="10" fill="#bbf7d0" text-anchor="middle">Infra</text>
+  <text x="52" y="360" font-family="Arial" font-size="12" fill="#94a3b8">CloudSys  —  Casablanca, Maroc</text>
+  <text x="52" y="380" font-family="Arial" font-size="12" fill="#64748b">Kubernetes, Terraform, GitHub Actions</text>
+  <text x="52" y="398" font-family="Arial" font-size="12" fill="#64748b">Experience : 3+ ans</text>
+  <rect x="52" y="410" width="100" height="26" rx="5" fill="#0f172a"/>
+  <text x="102" y="428" font-family="Arial" font-size="12" fill="#60a5fa" text-anchor="middle">Postuler</text>
+  <text x="340" y="428" font-family="Arial" font-size="11" fill="#64748b">1 candidature</text>
+
+  <!-- Card 4 -->
+  <rect x="440" y="288" width="370" height="140" rx="8" fill="#1e293b"/>
+  <rect x="440" y="288" width="6" height="140" rx="3" fill="#f59e0b"/>
+  <text x="462" y="314" font-family="Arial" font-size="15" font-weight="bold" fill="#f8fafc">Data Engineer</text>
+  <rect x="462" y="323" width="70" height="18" rx="9" fill="#78350f"/>
+  <text x="497" y="336" font-family="Arial" font-size="10" fill="#fde68a" text-anchor="middle">Data</text>
+  <text x="462" y="360" font-family="Arial" font-size="12" fill="#94a3b8">DataFirst  —  Rabat, Maroc</text>
+  <text x="462" y="380" font-family="Arial" font-size="12" fill="#64748b">Python, Spark, Airflow, SQL</text>
+  <text x="462" y="398" font-family="Arial" font-size="12" fill="#64748b">Experience : 2-5 ans</text>
+  <rect x="462" y="410" width="100" height="26" rx="5" fill="#0f172a"/>
+  <text x="512" y="428" font-family="Arial" font-size="12" fill="#60a5fa" text-anchor="middle">Postuler</text>
+  <text x="750" y="428" font-family="Arial" font-size="11" fill="#64748b">2 candidatures</text>
+
+  <!-- Footer -->
+  <rect x="0" y="490" width="840" height="30" fill="#1e293b"/>
+  <text x="420" y="509" font-family="Arial" font-size="11" fill="#475569" text-anchor="middle">SmartRH — Plateforme de gestion du recrutement</text>
+</svg>
