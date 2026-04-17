@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "users")
@@ -18,10 +19,12 @@ public class User {
 
     @NotBlank(message = "Username is required")
     @Size(min = 3, max = 50)
+    @Indexed(unique = true)
     private String username;
 
     @NotBlank(message = "Email is required")
     @Email(message = "Invalid email format")
+    @Indexed(unique = true)
     private String email;
 
     @NotBlank(message = "Password is required")
