@@ -10,6 +10,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "applications")
 public class Application {
 
+    public enum Status {
+        PENDING, REVIEWING, INTERVIEW, ACCEPTED, REJECTED
+    }
+
     @Id
     private String id;
 
@@ -24,4 +28,6 @@ public class Application {
 
     @NotBlank(message = "Job ID is required")
     private String jobId;
+
+    private Status status = Status.PENDING;
 }
