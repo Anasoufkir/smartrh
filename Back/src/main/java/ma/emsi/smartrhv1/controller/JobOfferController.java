@@ -4,6 +4,9 @@ import jakarta.validation.Valid;
 import ma.emsi.smartrhv1.model.JobOffer;
 import ma.emsi.smartrhv1.services.JobOfferService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +22,11 @@ public class JobOfferController {
     private JobOfferService jobOfferService;
 
     @GetMapping
-    public ResponseEntity<List<JobOffer>> getAllJobOffers() {
-        return ResponseEntity.ok(jobOfferService.findAll());
+    public ResponseEntity<Page<JobOffer>> getAllJobOffers(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
+        Pageable pageable = PageRequest.of(page, Math.min(size, 100));
+        return ResponseEntity.ok(jobOfferService.findAll(pageable));
     }
 
     @PostMapping
